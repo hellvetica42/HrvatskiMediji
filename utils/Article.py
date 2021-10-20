@@ -12,7 +12,7 @@ class Article:
         self.link = link
         self.feedId = feedId
 
-        self.hash = hashlib.md5((self.title + self.description + self.date).encode('utf-8')).hexdigest()
+        self.hash = hashlib.md5((self.link).encode('utf-8')).hexdigest()
 
     def __str__(self) -> str:
         outstr = f"""
